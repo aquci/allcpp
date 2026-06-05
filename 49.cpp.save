@@ -1,0 +1,22 @@
+#include <iostream>
+#include <utility>
+
+int main() {
+    std::pair<double,double> p1;
+    std::pair<double,double> p2;
+    std::pair<double,double> summ;
+
+    std::cout << "Введите 4 числа последовательно (1+2 и 3+4) для сортировки их сумм" << std::endl;
+    std::cin >> p1.first >> p1.second;
+    std::cin >> p2.first >> p2.second;
+
+    summ.first = p1.first + p1.second;
+    summ.second = p2.first + p2.second;
+
+    if (summ.first > summ.second) {
+       std::swap(summ.first, summ.second);
+    }
+       std::cout << summ.first << " " << summ.second << std::endl;
+
+    return 0;
+}
